@@ -3,15 +3,17 @@ from selenium import webdriver
 import time
 import math
 
-@pytest.fixture(scope="function")
+final_text = ''
+@pytest.fixture(scope="class")
 def browser():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
     yield browser
     print("\nquit browser..")
+    print('Answer for lesson:' + final_text)
     browser.quit()
 
-@pytest.mark.parametrize('pytest', ["236895", "236896", "236897", "236898", "236899", "236903", "236904", "236905"])
+@pytest.mark.parametrize('pytest', ['236895', '236896', '236897', '236898', '236899', '236903', '236904', '236905'])
 def test_guest_should_see_login_link(browser, pytest):
     link = f"https://stepik.org/lesson/{pytest}/step/1"
     browser.get(link)
@@ -23,4 +25,7 @@ def test_guest_should_see_login_link(browser, pytest):
     button.click()
     browser.implicitly_wait(5)
     text = browser.find_element_by_class_name('smart-hints__feedback').text
-    assert text == f'Correct!', "wrong answer in lesson {pytest}"
+    global final_text
+    if text != 'Correct!':
+        final_text += text
+    assert text == 'Correct!', f"wrong answer in lesson {pytest}"
