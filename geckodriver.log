@@ -1,0 +1,15 @@
+1639128220223	geckodriver	INFO	Listening on 127.0.0.1:65463
+1639128223290	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65464" "-no-remote" "-profile" "C:\\Users\\Oleg\\AppData\\Local\\Temp\\rust_mozprofilePfCe0r"
+1639128223566	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\Oleg\\AppData\\Local\\Temp\\rust_mozprofilePfCe0r\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65464/devtools/browser/7baf5e39-fb55-456e-963e-5795b7bf84c7
+1639128225313	Marionette	INFO	Listening on port 65469
+1639128225357	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://stepik.azureedge.net/static/frontend-build/vendor.js?v=1638797634, line 6082: unreachable code after return statement
+JavaScript warning: https://mc.yandex.ru/metrika/tag.js, line 10: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1639128276622	Marionette	INFO	Stopped listening on port 65469
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
